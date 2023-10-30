@@ -1,26 +1,30 @@
 // react -> 1 functional(hooks) 2. class component (lifecycle method)
 
-function BodyComp() {
+//phase 1 -> variables -> undefined 
+//
+function BodyComp(data) {
+    const value = data ? data.children : "empty data";
+    // console.log("data", data)
   return (
     <>
-      <div>This is body</div>
+      <div>This is body and children is {value} </div>
     </>
   );
 }
-function BodyComp1() {
+export function BodyComp1() { //named export
     return (
       <>
-        <div>This is body</div>
-      </>
-    );
-  }
-  
-  function BodyComp2() {
-    return (
-      <>
-        <div>This is body</div>
+        <div>This is body component 1</div>
       </>
     );
   }
 
-export default BodyComp;
+  export function BodyComp2() { //named export 
+    return (
+      <>
+        <div>This is body component 2</div>
+      </>
+    );
+  }
+
+export default BodyComp; //only one function can be returned as default

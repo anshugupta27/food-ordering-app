@@ -1,5 +1,12 @@
-const HeaderComp = () => {
-    return (<>This is header</>)
+import  { useState } from "react";
 
-}
-export default HeaderComp
+const HeaderComp = (prop) => {
+    console.log("header component called now")
+ 
+
+  return <>
+  this is the user: {prop.name}
+
+  </>
+};
+export default HeaderComp;
